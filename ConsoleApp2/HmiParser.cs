@@ -200,7 +200,7 @@ namespace HmiParser
             }
 
             var shortcut = new HmiObject { Name = name, ObjectType = "Shortcut" };
-            
+
             // 检查是否有参数
             if (_currentToken.Type == TokenType.LParen)
             {
@@ -523,7 +523,7 @@ namespace HmiParser
                 Eat();
 
                 // 处理枚举值（如 EnumAlignment.HCENTER_VCENTER）
-                while (_currentToken.Type == TokenType.Identifier && 
+                while (_currentToken.Type == TokenType.Identifier &&
                        _currentToken.Value.StartsWith("."))
                 {
                     value += _currentToken.Value;

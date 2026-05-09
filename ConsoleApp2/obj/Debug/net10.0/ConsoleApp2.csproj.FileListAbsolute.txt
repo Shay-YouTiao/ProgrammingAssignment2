@@ -1,0 +1,15 @@
+/workspaces/ProgrammingAssignment2/ConsoleApp2/bin/Debug/net10.0/ConsoleApp2
+/workspaces/ProgrammingAssignment2/ConsoleApp2/bin/Debug/net10.0/ConsoleApp2.deps.json
+/workspaces/ProgrammingAssignment2/ConsoleApp2/bin/Debug/net10.0/ConsoleApp2.runtimeconfig.json
+/workspaces/ProgrammingAssignment2/ConsoleApp2/bin/Debug/net10.0/ConsoleApp2.dll
+/workspaces/ProgrammingAssignment2/ConsoleApp2/bin/Debug/net10.0/ConsoleApp2.pdb
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.AssemblyInfoInputs.cache
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.AssemblyInfo.cs
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.csproj.CoreCompileInputs.cache
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.sourcelink.json
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.dll
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/refint/ConsoleApp2.dll
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.pdb
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ConsoleApp2.genruntimeconfig.cache
+/workspaces/ProgrammingAssignment2/ConsoleApp2/obj/Debug/net10.0/ref/ConsoleApp2.dll
