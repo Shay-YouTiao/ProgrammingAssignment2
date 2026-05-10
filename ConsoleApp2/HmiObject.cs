@@ -13,15 +13,17 @@ namespace HmiParser
         public string Name { get; set; } = "";
         public Dictionary<string, object> Properties { get; set; } = new Dictionary<string, object>();
         public List<HmiObject> Children { get; set; } = new List<HmiObject>();
-        public string ObjectType { get; set; } = "";
+        public string Type { get; set; } = "";
+        public int ChildrenNodeCount { get; set; }
 
         public virtual Dictionary<string, object> ToDictionary()
         {
             var result = new Dictionary<string, object>
             {
                 ["name"] = Name,
-                ["type"] = ObjectType,
-                ["properties"] = Properties
+                ["type"] = Type,
+                ["properties"] = Properties,
+                ["childrenNodeCount"] = 0
             };
 
             if (Children.Count > 0)
@@ -31,7 +33,8 @@ namespace HmiParser
                 {
                     childrenList.Add(child.ToDictionary());
                 }
-                result["children"] = childrenList;
+                result["Children"] = childrenList;
+                result["childrenNodeCount"] = childrenList.Count;
             }
 
             return result;
@@ -48,6 +51,11 @@ namespace HmiParser
         }
     }
 
+public class BindLink
+{
+            public bool IsBind { get; set; }
+        public object BindTo { get; set; }
+}
     /// <summary>
     /// 边框样式
     /// </summary>
@@ -56,10 +64,9 @@ namespace HmiParser
         public PenStyle Line { get; set; } = PenStyle.SolidLine;
         public CapStyle Cap { get; set; } = CapStyle.SquareCap;
         public JoinStyle Join { get; set; } = JoinStyle.MiterJoin;
-
         public BorderStyle()
         {
-            ObjectType = "BorderStyle";
+            Type = "BorderStyle";
         }
     }
 
@@ -74,7 +81,7 @@ namespace HmiParser
 
         public Border()
         {
-            ObjectType = "Border";
+            Type = "Border";
         }
     }
 
@@ -97,7 +104,7 @@ namespace HmiParser
 
         public GraphicElement()
         {
-            ObjectType = "GraphicElement";
+            Type = "GraphicElement";
         }
     }
 
@@ -120,7 +127,7 @@ namespace HmiParser
         public Button()
         {
             ElementType = "Button";
-            ObjectType = "Button";
+            Type = "Button";
         }
     }
 
@@ -144,7 +151,7 @@ namespace HmiParser
         public TextDisplay()
         {
             ElementType = "TextDisplay";
-            ObjectType = "TextDisplay";
+            Type = "TextDisplay";
         }
     }
 
@@ -170,7 +177,7 @@ namespace HmiParser
         public BarGraph()
         {
             ElementType = "BarGraph1";
-            ObjectType = "BarGraph1";
+            Type = "BarGraph1";
         }
     }
 
@@ -183,7 +190,7 @@ namespace HmiParser
 
         public StateDefinition()
         {
-            ObjectType = "State";
+            Type = "State";
         }
     }
 
@@ -197,7 +204,7 @@ namespace HmiParser
 
         public StateTable()
         {
-            ObjectType = "StateTable";
+            Type = "StateTable";
         }
     }
 
@@ -218,7 +225,7 @@ namespace HmiParser
 
         public Screen()
         {
-            ObjectType = "Screen";
+            Type = "Screen";
         }
 
         public override Dictionary<string, object> ToDictionary()
@@ -273,7 +280,7 @@ namespace HmiParser
 
         public Popup()
         {
-            ObjectType = "Popup";
+            Type = "Popup";
         }
     }
 
@@ -297,7 +304,7 @@ namespace HmiParser
 
         public AddOnGraphic()
         {
-            ObjectType = "AddOnGraphic";
+            Type = "AddOnGraphic";
         }
     }
 
@@ -312,7 +319,7 @@ namespace HmiParser
 
         public ViewProject()
         {
-            ObjectType = "ViewProject";
+            Type = "ViewProject";
         }
     }
 }
